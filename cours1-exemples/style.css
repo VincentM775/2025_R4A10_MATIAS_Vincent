@@ -1,0 +1,32 @@
+.grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+@media screen and (width >= 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/** A partir de 2000px de large, mon style ne sera plus géré
+et on reviendra au style précédent */
+@media screen and (width >= 1200px) and (width < 2000px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
