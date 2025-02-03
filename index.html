@@ -11,17 +11,21 @@
         <p>
             TP1 - MATIAS- Vincent
         </p>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="">Page1</a>
-            <a href="">page2</a>
-            <a href="">Page3</a>
+        
+        <nav id="nav">
+            <div id="navigation" class="">
+                <a href="index.html">Accueil</a>
+                <a href="">Page1</a>
+                <a href="">page2</a>
+                <a href="">Page3</a>
+            </div>
+            <button onclick="toggleNavigation()" id="bouton-nav">Menu</button>
         </nav>
     </header>
     <main>
-        <h2>
+        <h1>
             MON TITRE DE NIVEAU 1
-        </h2>
+        </h1>
         <ul class="grid">
             <li class="card">
                 <div class="imageCard">
@@ -113,10 +117,10 @@
         <table class="footerPartiGauche">
             <tr>
                 <td>
-                    <p>Logo</p>
+                    <p id="footer-logo">Logo</p>
                 </td>
                 <td>
-                    <p>Slogan</p>
+                    <p id="footer-slogan">Slogan</p>
                 </td>
             </tr>
         </table>
@@ -165,5 +169,15 @@
             </tr>
         </table>
     </footer>
+    <script>
+        function toggleNavigation() {
+            var nav = document.getElementById('navigation');
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

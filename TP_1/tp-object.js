@@ -17,16 +17,21 @@ function getObject() {
 module.exports = {
   // 1) Renvoyer la propriété description
   Q1() {
+    return getObject().description;
     // Implémentation ici
   },
 
   // 2) Renvoyer la propriété city
   Q2() {
+    return getObject().address.city;
+    
     // Implémentation ici
   },
 
   // 3) Renvoyer les clés de l'objet sous forme de tableau
   Q3() {
+    return Object.keys(getObject());
+    
     // Implémentation ici
   },
 
@@ -34,22 +39,32 @@ module.exports = {
 
   // 5) Ajouter la propriété email à myObject et renvoyer l'objet modifié
   Q5() {
+    let objet = getObject();
+    objet.email = email;
+    return objet;
     // Implémentation ici
   },
 
   // 6) Ajouter une propriété dynamique étant le résultat de la concaténation des chaines hello et world et dont la valeur est true
   // renvoyer l'objet modifié
   Q6() {
+    let objet = getObject();
+    objet["Hello"+"World"] = true;
+    return objet;
     // Implémentation ici
   },
 
   // 7) Supprimer la propriété isBestObject et renvoyer l'objet
   Q7() {
+    let objet = getObject();
+    delete objet.isBestObject;
+    return objet;
     // Implémentation ici
   },
 
   // 8) Vérifier que la propriété description existe dans l'objet, renvoyer un booléen
   Q8() {
+    return getObject().hasOwnProperty("description");
     // Implémentation ici
   },
 };
