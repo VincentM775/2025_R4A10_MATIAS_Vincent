@@ -1,22 +1,42 @@
 <div class="testimonials">
     <div class="testimonial-card">
-      <h3>What our customer are saying</h3>
-  
-      @for (testimonial of testimonials; track $index) {
-        @if ($index === currentIndex) {
-            <div>
-              <img [src]="testimonial.image" alt="Photo of {{ testimonial.name }}">
-              <h4>{{ testimonial.name }}</h4>
-              <p>{{ testimonial.role }}</p>
-              <p>{{ testimonial.text }}</p>
-            </div>
-          }
-      }
-  
-      <div class="navigation">
-        <button (click)="prevTestimonial()"><</button>
-        <button (click)="nextTestimonial()">></button>
-      </div>
+        <h3>What our customers are saying</h3>
+
+        @for (testimonial of testimonials; track $index) {
+            @if ($index === currentIndex) {
+                <div class="testimonial-card-content">
+                    <img [src]="testimonial.image" alt="Photo of {{ testimonial.name }}">
+                    <div class="testimonial-card-content-info">
+                        <h4>{{ testimonial.name }}</h4>
+                        <p>{{ testimonial.role }}</p>
+                    </div>
+                    <p class="testimonial-text">{{ testimonial.text }}</p>
+                </div>
+            }
+        }
     </div>
-  </div>
-  
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <!-- Flèche gauche -->
+        <button (click)="prevTestimonial()" class="nav-button">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+            </svg>
+        </button>
+
+        <!-- Indicateurs (petits points) -->
+        <div class="dots">
+            @for (testimonial of testimonials; track $index) {
+                <span class="dot" [class.active]="$index === currentIndex" (click)="goToTestimonial($index)"></span>
+            }
+        </div>
+
+        <!-- Flèche droite -->
+        <button (click)="nextTestimonial()" class="nav-button">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+            </svg>
+        </button>
+    </div>
+</div>

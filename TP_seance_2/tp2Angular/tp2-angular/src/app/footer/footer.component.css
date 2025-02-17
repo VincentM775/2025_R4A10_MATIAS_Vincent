@@ -72,3 +72,50 @@ footer a:hover,footer a:focus {
   font-weight: 100;
   margin-top: 10px;
 }
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column; /* Passage en colonne */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .gradient-bg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .colonneFooter {
+    margin-top: 20px; /* Ajout d'un espace entre les colonnes */
+    align-items: center;
+  }
+
+  .colGauche {
+    width: 90%; /* Réduction de la largeur */
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #boxLogo {
+    justify-content: center;
+  }
+
+  #titreLogo {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  footer nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer a {
+    font-size: 16px;
+  }
+
+  .titreLink {
+    font-size: 18px;
+  }
+}

@@ -9,16 +9,16 @@ import { Component } from '@angular/core';
 export class TestimonialComponent {
   testimonials = [
     {
-      image: 'assets/user1.jpg',
+      image: 'assets/images/img1.png',
       name: 'Edward Newgate',
       role: 'Founder Circle',
-      text: 'Our dedicated patient engagement app and web portal allow you to access information instantly...'
+      text: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely.'
     },
     {
-      image: 'assets/user2.jpg',
+      image: 'assets/images/img1.png',
       name: 'John Doe',
       role: 'CEO CompanyX',
-      text: 'Great service! I love how easy it is to access my medical history...'
+      text: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely.'
     }
   ];
 
@@ -30,5 +30,9 @@ export class TestimonialComponent {
 
   nextTestimonial() {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+  }
+
+  goToTestimonial(index: number) {
+    this.currentIndex = index;
   }
 }
