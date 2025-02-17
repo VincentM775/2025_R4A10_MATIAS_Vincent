@@ -1,0 +1,13 @@
+<ul class="grid">
+  @for (card of cards; track card.id){
+  <app-single-card [cardData]="card" />
+  }
+  @empty {
+  <li>Aucun élément dans la liste</li>
+  }
+</ul>
+
+<div class="pagination">
+  <app-button (clicked)="onPrevClick()">Prev</app-button>
+  <app-button (clicked)="onNextClick()">Next</app-button>
+</div>

@@ -1,0 +1,97 @@
+header {
+  padding-bottom: 20px;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+#boxLogo{
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+}
+#logo{
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: #1F1534;
+
+}
+
+nav a:hover,nav a:focus {
+  opacity: 1;
+  opacity: 1;
+}
+
+
+.titre{
+  font-size: 48px;
+  line-height: 56px;
+  height: 700px;
+}
+.sousTitre{
+  height: 300px;
+  font-size: 21px;
+  line-height: 32px;
+}
+#Tlogo{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  font-family: SYSTEM-UI;
+}
+#titreLogo{
+  font-size: 24px;
+  font-family: SYSTEM-UI;
+
+}
+header{
+  margin-left: 190px;
+  margin-right: 190px;
+}
+#headerTexte{
+  display: flex;
+  flex-direction: column;
+  width: 445px;
+  height: 338px;
+  left: 190px;
+  top: 283px;
+}
+#titre{
+  width: 427px;
+  height: 112px;
+  top: 283px;
+  left: 190px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+  margin: 0;
+  padding: 0; 
+}
+#headerTexte img {
+  width: 693px;
+  height: 598px;
+}
+#headerTexte button{
+  width: 200px;
+  min-height: 56px;
+  background: #458FF6;
+  border-radius: 55px;
+  color : white;
+  border: none;
+}

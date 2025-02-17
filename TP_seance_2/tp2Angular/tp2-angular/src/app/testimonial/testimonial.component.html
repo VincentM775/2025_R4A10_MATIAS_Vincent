@@ -1,0 +1,22 @@
+<div class="testimonials">
+    <div class="testimonial-card">
+      <h3>What our customer are saying</h3>
+  
+      @for (testimonial of testimonials; track $index) {
+        @if ($index === currentIndex) {
+            <div>
+              <img [src]="testimonial.image" alt="Photo of {{ testimonial.name }}">
+              <h4>{{ testimonial.name }}</h4>
+              <p>{{ testimonial.role }}</p>
+              <p>{{ testimonial.text }}</p>
+            </div>
+          }
+      }
+  
+      <div class="navigation">
+        <button (click)="prevTestimonial()"><</button>
+        <button (click)="nextTestimonial()">></button>
+      </div>
+    </div>
+  </div>
+  

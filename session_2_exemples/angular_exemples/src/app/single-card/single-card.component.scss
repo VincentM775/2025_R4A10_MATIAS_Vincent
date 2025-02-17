@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid black;
+
+  &__image {
+    height: 100px;
+    display: block;
+    border-bottom: 1px solid black;
+  }
+
+  &__content {
+    padding: 10px;
+  }
+}

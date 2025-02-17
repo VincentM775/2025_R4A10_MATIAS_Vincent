@@ -1,0 +1,11 @@
+<header>
+  <div class="container">
+    <p>Exemple Angular</p>
+    <nav>
+      @for (link of links; track $index) {
+      <a [href]="link.href">{{link.label}}</a>
+      }
+    </nav>
+    <button>Menu</button>
+  </div>
+</header>

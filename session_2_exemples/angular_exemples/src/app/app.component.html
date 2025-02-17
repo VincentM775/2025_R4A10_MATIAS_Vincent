@@ -1,0 +1,16 @@
+<app-header />
+<main class="container">
+  <h1>Page Angular, titre = {{ title }}</h1>
+  <p>Titre en majuscule : {{ title | uppercase }} </p>
+  <h2>Liste d'éléments</h2>
+  <app-button (clicked)="toggleShowList()">
+    {{showList ? "Cacher la liste" : "Montrer la liste"}}
+  </app-button>
+
+  @if (showList){
+  <app-card-list [cards]="slicedList" (pageChangeEvent)="onPageChange($event)" />
+  } @else {
+  <p>La liste est cachée</p>
+  }
+
+</main>

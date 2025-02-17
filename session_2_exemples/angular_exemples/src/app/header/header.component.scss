@@ -1,0 +1,40 @@
+@import "../../mixins.scss";
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid black;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: none;
+    gap: 15px;
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: blue;
+      }
+    }
+
+    @include min-w(sm) {
+      display: flex;
+    }
+  }
+
+  button {
+    @include min-w(sm) {
+      display: none;
+    }
+  }
+}
