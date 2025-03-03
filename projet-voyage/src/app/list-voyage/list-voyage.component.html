@@ -1,0 +1,42 @@
+<div class=" bg-gradient-to-b from-white to-blue-500 to-red-100 min-h-screen pb-4">
+  <div class="container mx-auto p-0">
+    <h1 class="text-4xl font-bold text-blue-600 mt-10 mb-2">🌍 Liste des voyages :</h1>
+    <h2 class="text-xl font-semibold text-green-600 mb-4 ml-1">Retrouver ici les meilleurs voyages au meilleurs prix !!</h2>
+
+    <div class="flex flex-wrap justify-around">
+        @for (voyage of displayedVoyages; track $index) {
+          <app-card
+            [voyage]="voyage"
+            (delete)="onDelete($event)"
+          ></app-card>
+        }
+        @if (voyages.length === 0) {
+          <div class="text-center text-gray-500"><p>Aucun voyage à afficher.</p></div>
+        }
+    </div>
+
+    <div class="flex justify-center mt-10 space-x-2">
+      <button 
+        (click)="goToPreviousPage()" 
+        [disabled]="currentPage === 1"
+        class="px-4 py-2 bg-blue-500 text-white rounded mr-2 hover:bg-blue-600"
+        >Précédent</button>
+
+      @for (page of totalPages(); track $index) {
+        <button 
+          (click)="goToPage(page)" 
+          [class.bg-blue-700]="page === currentPage"
+          [class.text-white]="page === currentPage"
+          [class.bg-gray-300]="page !== currentPage"
+          class="px-3 py-1 rounded shadow"
+        >{{ page }}</button>
+      }
+
+      <button 
+        (click)="goToNextPage()" 
+        [disabled]="currentPage >= totalPages().length"
+        class="px-4 py-2 bg-blue-500 text-white rounded ml-2 hover:bg-blue-600"
+        >Suivant</button>
+    </div>
+  </div>
+</div>

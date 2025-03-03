@@ -1,0 +1,38 @@
+<div class="container mx-auto p-6 flex flex-col items-center">
+    @if (voyage) {
+      <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+        <h2 class="text-2xl font-bold text-blue-600">{{ voyage.destination }}</h2>
+        <p class="text-gray-700 mt-2">{{ voyage.description }}</p>
+        <p class="text-lg font-semibold text-blue-800 mt-4">
+          {{ voyage.prix.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' }) }}
+        </p>
+  
+        <div class="mt-6 flex space-x-2">
+          <button 
+            (click)="retourListe()" 
+            class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+          >
+            Retour à la liste
+          </button>
+  
+          <button 
+            (click)="confirmDelete()" 
+            class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700"
+          >
+            Supprimer
+          </button>
+        </div>
+      </div>
+  
+      @if (showModal()) {
+        <app-confirm-modal 
+          [message]="'Voulez-vous vraiment supprimer ce voyage vers ' + voyage.destination + ' ?'"
+          (confirm)="onConfirm()"
+          (cancel)="onCancel()">
+        </app-confirm-modal>
+      }
+    } @else {
+      <p class="text-center text-gray-500">Voyage non trouvé.</p>
+    }
+  </div>
+  
