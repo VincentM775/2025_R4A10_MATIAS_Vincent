@@ -1,0 +1,31 @@
+<form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+  <div>
+    <label for="title">Titre</label>
+    <input id="title" name="title" ngModel required minlength="2" maxlength="35">
+    @if (bookForm.controls['title'].invalid && bookForm.controls['title'].touched) {
+      <p class="error">Le titre doit contenir entre 2 et 35 caractères.</p>
+    }
+  </div>
+
+  <div>
+    <label for="author">Auteur</label>
+    <input id="author" name="author" ngModel required minlength="5" maxlength="50">
+    @if (bookForm.controls['author'].invalid && bookForm.controls['author'].touched) {
+      <p class="error">L'auteur doit contenir entre 5 et 50 caractères.</p>
+    }
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <textarea id="description" name="description" ngModel required minlength="10" maxlength="255"></textarea>
+    @if (bookForm.controls['description'].invalid && bookForm.controls['description'].touched) {
+      <p class="error">La description doit contenir entre 10 et 255 caractères.</p>
+    }
+  </div>
+
+  <button type="submit" [disabled]="bookForm.invalid">Ajouter le livre</button>
+
+  @if (successMessage) {
+    <p class="success">{{ successMessage }}</p>
+  }
+</form>

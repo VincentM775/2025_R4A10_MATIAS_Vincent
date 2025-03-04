@@ -1,0 +1,45 @@
+.book-details {
+  text-align: center;
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.author {
+  font-weight: bold;
+  color: #6200ea;
+}
+.description {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+.cover {
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #6200ea;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+  background-color: #4a148c;
+}
