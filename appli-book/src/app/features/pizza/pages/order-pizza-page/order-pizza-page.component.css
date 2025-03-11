@@ -1,0 +1,98 @@
+.order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fond légèrement gris pour plus de douceur */
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  select, input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  select:focus, input[type="email"]:focus {
+    border-color: #007bff; /* Changement de la bordure lors du focus */
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+  }
+  
+  button[disabled] {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .form-group input[type="email"] {
+    border-radius: 4px;
+  }
+  
+  select, input[type="email"] {
+    border-radius: 5px;
+    padding: 8px;
+  }
+  
+  .success-message, .error-message {
+    font-weight: bold;
+  }
+  
+  .form-group select {
+    padding: 8px;
+  }
+  

@@ -1,0 +1,14 @@
+.order-page {
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.order-title {
+  color: #ff7f11;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

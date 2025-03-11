@@ -1,0 +1,27 @@
+<div class="pizza-page">
+  <h1 class="pizza-title">
+    {{ pizza?.name }}
+    <span class="pizza-rating">
+      @for (star of stars; track $index) {
+        <span>&#9733;</span>
+      }
+    </span>
+  </h1>
+
+  <div class="pizza-image-container">
+    <img [src]="pizza?.image" [alt]="pizza?.name" class="pizza-image" />
+  </div>
+
+  <p class="pizza-description">{{ pizza?.description }}</p>
+
+  <div class="pizza-ingredients">
+    @for (ingredient of pizza?.ingredients; track $index) {
+      <span class="ingredient-badge">{{ ingredient }}</span>
+    }
+  </div>
+
+  <div class="pizza-footer">
+    <p class="pizza-price">{{ pizza?.price | currency: 'EUR' }}</p>
+    <button class="order-button" (click)="onOrderPizza()">Commander maintenant</button>
+  </div>
+</div>

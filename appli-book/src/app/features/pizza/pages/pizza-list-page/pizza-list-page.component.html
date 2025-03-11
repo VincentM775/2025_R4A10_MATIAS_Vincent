@@ -1,0 +1,15 @@
+<ul class="pizza-container">
+  @for (pizza of pizzas; track $index){
+  <li class="pizza-card">
+    <img [src]="pizza.image" [alt]="pizza.name">
+    <h2>{{ pizza.name }}</h2>
+    <p class="description">{{ pizza.description }}</p>
+    <p class="ingredients">Ingrédients: {{ pizza.ingredients.join(', ') }}</p>
+    <p class="price">{{ pizza.price | currency:'EUR' }}</p>
+    <p class="stars">{{ getStars(pizza.rating).join(' ') }}</p>
+    <a [href]="formatPizzaUrl(pizza.name)">Voir la pizza</a>
+  </li>
+  } @empty {
+  <li>Aucune Pizza</li>
+  }
+</ul>

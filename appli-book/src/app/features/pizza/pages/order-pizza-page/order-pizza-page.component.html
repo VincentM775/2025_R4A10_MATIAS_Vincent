@@ -1,0 +1,74 @@
+<div class="order-form">
+    <h1>Commander une pizza</h1>
+  
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="pizza">Sélectionner une pizza</label>
+        <select id="pizza" formControlName="pizza">
+          <option value="">Choisir une pizza</option>
+          @for (pizza of pizzas; track $index) {
+            <option [value]="pizza.name">{{ pizza.name }}</option>
+          }
+        </select>
+        @if (orderForm.get('pizza')?.invalid && orderForm.get('pizza')?.touched) {
+          <div class="error">
+            Ce champ est obligatoire.
+          </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label for="size">Choisir la taille</label>
+        <select id="size" formControlName="size">
+          <option value="">Choisir la taille</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="XXL">XXL</option>
+        </select>
+        @if (orderForm.get('size')?.invalid && orderForm.get('size')?.touched) {
+          <div class="error">
+            Ce champ est obligatoire.
+          </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label for="paymentMethod">Moyen de paiement</label>
+        <select id="paymentMethod" formControlName="paymentMethod">
+          <option value="">Choisir le moyen de paiement</option>
+          <option value="Espèces">Espèces</option>
+          <option value="Carte Bleue">Carte Bleue</option>
+          <option value="Bitcoin">Bitcoin</option>
+        </select>
+        @if (orderForm.get('paymentMethod')?.invalid && orderForm.get('paymentMethod')?.touched) {
+          <div class="error">
+            Ce champ est obligatoire.
+          </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input id="email" formControlName="email" type="email" />
+        @if (orderForm.get('email')?.invalid && orderForm.get('email')?.touched) {
+          <div class="error">
+            L'adresse email est invalide.
+          </div>
+        }
+      </div>
+  
+      <button type="submit" [disabled]="orderForm.invalid">Soumettre la commande</button>
+    </form>
+  
+    @if (successMessage) {
+      <div class="success-message">
+        {{ successMessage }}
+      </div>
+    }
+    @if (errorMessage) {
+      <div class="error-message">
+        {{ errorMessage }}
+      </div>
+    }
+  </div>
+  

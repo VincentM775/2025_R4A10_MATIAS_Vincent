@@ -1,0 +1,83 @@
+.pizza-container {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.pizza-card {
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.pizza-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.4);
+}
+
+.pizza-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.pizza-card h2 {
+  color: orange;
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.description {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.ingredients {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stars {
+  font-size: 22px;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.pizza-card a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: orange;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.pizza-card a:hover {
+  background: transparent;
+  border: 1px solid orange;
+  color: orange;
+}
+
+@media (max-width: 480px) {
+  .pizza-container {
+    grid-template-columns: 1fr;
+  }
+}

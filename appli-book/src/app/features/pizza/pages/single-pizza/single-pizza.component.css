@@ -1,0 +1,82 @@
+.pizza-page {
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.pizza-title {
+  color: #ff7f11;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pizza-rating {
+  display: inline-block;
+  font-size: 20px;
+  color: gold;
+  margin-left: 10px;
+}
+
+.pizza-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pizza-image {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(255, 127, 17, 0.3);
+}
+
+.pizza-description {
+  font-size: 18px;
+  opacity: 0.8;
+  margin: 15px auto;
+  max-width: 600px;
+}
+
+.pizza-ingredients {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.ingredient-badge {
+  background: rgba(255, 127, 17, 0.2);
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.pizza-footer {
+  margin-top: 30px;
+}
+
+.pizza-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.order-button {
+  background-color: #ff7f11;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e66a00;
+  transform: scale(1.05);
+}

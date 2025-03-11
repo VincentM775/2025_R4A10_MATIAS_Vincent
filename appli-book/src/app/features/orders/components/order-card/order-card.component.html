@@ -1,0 +1,6 @@
+<div class="order-card">
+  <h3>{{ order.pizza }} ({{ order.size }})</h3>
+  <p><strong>Payé avec :</strong> {{ order.paymentMethod }}</p>
+  <p><strong>Email :</strong> {{ order.email }}</p>
+  <button class="delete-button" (click)="removeOrder()">Supprimer</button>
+</div>

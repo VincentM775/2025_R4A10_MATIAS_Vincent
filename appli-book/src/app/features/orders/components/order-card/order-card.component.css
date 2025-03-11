@@ -1,0 +1,26 @@
+.order-card {
+  background: rgba(255, 127, 17, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 400px;
+  text-align: left;
+  position: relative;
+}
+
+.delete-button {
+  background-color: #ff3b30;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}

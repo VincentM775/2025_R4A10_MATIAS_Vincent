@@ -1,0 +1,13 @@
+<div class="order-page">
+  <h1 class="order-title">Liste des commandes</h1>
+
+  @if (orders.length > 0) {
+    <div>
+      @for (order of orders; track $index) {
+        <app-order-card [order]="order" (remove)="onDelete($event)" />
+      }
+    </div>
+  } @else {
+    <p>Aucune commande pour le moment.</p>
+  }
+</div>
