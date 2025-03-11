@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Pizza } from '../models/pizza.model'; // Assure-toi que le type Pizza est importé
+import { Pizza } from '../models/pizza.model';
 
 @Injectable({
-  providedIn: 'root', // Fournit le service globalement
+  providedIn: 'root', 
 })
 export class PizzaService {
   private pizzas: Pizza[] = [

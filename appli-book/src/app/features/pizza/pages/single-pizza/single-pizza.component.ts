@@ -38,10 +38,9 @@ export class SinglePizzaComponent {
       .fill('☆')
       .map((_, i) => (i < this.pizza?.rating! ? '★' : '☆'));
   }
-  
-   // Méthode pour rediriger vers la page de commande
+
    onOrderPizza(): void {
-    this.router.navigate(['/commander']); // Navigue vers la page de commande
+    this.router.navigate(['/commander']);
   }
 }
 
